@@ -5,6 +5,7 @@ tasks{
     description varchar(255)
     date date
     progress varchar(255)
+    user_id int
 }
 
 users{
