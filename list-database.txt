@@ -1,0 +1,15 @@
+table:
+tasks{
+    id auto increment primary key
+    task varchar(255)
+    description varchar(255)
+    date date
+    progress varchar(255)
+}
+
+users{
+    id auto increment primary key
+    username varchar(255)
+    email varchar(255)
+    password varchar(255)
+}
