@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="hidden elements">
-        <div class="col-3 p-0">
+        <div class="col-3 p-0" id="login-jpg">
                 <div class="login-image">
                     <img class="side-image" src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/person-writing-letter-with-metal-quill.jpg?itok=lCt7Bo6c" />
                 <div class="image-tint"></div>
@@ -19,10 +19,10 @@
         </div>
     </section>
 
-        <div class="container-fluid d-flex align-items-center justify-content-center background-primary" style="height: 100vh;">
+        <div class="container-fluid d-flex align-items-center justify-content-center background-primary" style="height: 100vh;" id="log-form">
         <section class="hidden elements">    
-        <div class="mx-auto rounded login-form">
-                <div>
+        <div class="mx-auto rounded login-form" id="log-formup">
+                <div class="login-page">
                     <h1 class="text-center">
                         Login Page
                     </h1>
@@ -64,19 +64,19 @@
                     }
                 }
             ?>      <form action="login.php" method="post">
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label for="username_or_email" class="form-label">Username or Email</label>
                             <input type="text" class="form-control" id="username_or_email" name="username_or_email" placeholder="Enter your username or email" required>
                         </div>
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
                         </div>
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <button type="submit" class="btn submit-button" name="login">Login</button>
                         </div>
                     </form>
-                    <div class="mb-3 mx-auto login-input-field">
+                    <div class="mb-3 mx-auto login-input-field" id="field">
                         <p>Forgot your password? <a href="forgotPassword.php">Click here.</a></p>
                         <p>Don't have an account? <a href="registration.php">Sign up here.</a></p>
                     </div>

@@ -1,5 +1,10 @@
 .primary-background-color{
-    background-color: #FB9F89;
+    background-color: #931600;
+    
+}
+
+body {
+    background-color: antiquewhite;
 }
 
 .navigation-bar{
@@ -11,15 +16,22 @@
 }
 
 .logo{
-    font-family: 'Young Serif', serif;
+    font-weight: bold;
     font-size: x-large;
+    color: white;
+    width: fit-content;
+}
+
+#icon {
+    padding-left: 20px;
+    padding-top: 5px;
+    color: white;
 }
 
 .login-image{
     overflow: hidden;
     position: absolute;
-    width: 300px;
-
+    width: 100vw;
 }
 
 .login-image img{
@@ -73,6 +85,46 @@
     position: absolute;
 }
 
+#tbodyresult {
+    background-color: white;
+    border-radius: 20px;
+}
+
+#toDoForm {
+    margin-bottom: 30px;
+}
+
+.actbuttonheader {
+    align-items: left;
+    display: flex;
+    width: fit-content;
+}
+
+.headertitle {
+    width: fit-content;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logoutbadge {
+    height: 35px;
+    align-items: right;
+    justify-content: flex-end;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(253, 255, 164);
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+    float: right;
+    text-align: right;
+}
+
 /* Add your desired styles for each progress option */
 .option-not-started {
     background-color: #FFCCCC; /* Red for "Not Started" */
@@ -98,6 +150,26 @@
     transition: all 1s;
 }
 
+.usernamebadge {
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(253, 255, 164);
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mx-auto {
+    border-radius: 5px;
+    background-color: rgb(255, 248, 239);
+}
+
 /* Styles to show the form elements with a staggered transition */
 .show {
     opacity: 1;
@@ -118,6 +190,83 @@
     transition-delay: 600ms;
 }
 
+#log-form {
+    background-color: antiquewhite;
+}
 
+#login-jpg {
+    display: hidden;
+}
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
 
+    #navbarhead {
+        scale: 1;
+        width: 100%;
+        display: flex;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .table {
+        scale: 0.9;
+        align-items: left;
+        justify-content: left;
+        left: 0;
+        display: block;
+        margin-left: 0;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    #login-jpg {
+        display: none;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .background-primary {
+        background-color: antiquewhite;
+    }
+
+    #log-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: antiquewhite;
+    }
+
+    /* Adjust the layout for smaller screens if needed */
+    .container {
+        padding: 10px;
+    }
+
+    .hidden {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .login-page {
+        width: 100%;
+    }
+    
+    #efields {
+        width: 50%;
+    }
+    .login-image {
+        display: none;
+    }
+}

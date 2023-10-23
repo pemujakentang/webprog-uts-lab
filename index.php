@@ -46,20 +46,22 @@ if (isset($_SESSION['user'])) {
 
 <body>
     <header class="navbar navbar-expand-lg bd-navbar sticky-top primary-background-color">
-        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap navigation-bar">
-            <div class="offcanvas-body p-4 pt-0 p-lg-0 d-flex">
-                <i class="fa-solid fa-pencil fs-3 pe-3"></i>
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap navigation-bar" id="navbarhead">
+            <div class="headertitle">
+                <i class="fa-solid fa-pencil fs-3 pe-3" id="icon"></i>
                 <div class="logo">
                     Le To-Do List
                 </div>
             </div>
+            <div class="actbuttonheader">
             <?php
             if (isset($_SESSION['user'])) {
-                echo '<a href="logout.php" class="btn btn-danger">Logout</a>';
+                echo '<a href="logout.php" class="btn btn-danger" id="usernamebadge">Logout</a>';
                 // echo $_SESSION['user'];
-                echo "<span class='badge bg-secondary h-100 fs-5 mx-4'>".$_SESSION['userinfo']['username']."</span>" ;
+                echo "<span class='usernamebadge' id='usernamebadge'>".$_SESSION['userinfo']['username']."</span>" ;
             }
             ?>
+            </div>
         </nav>
     </header>
 
@@ -135,9 +137,10 @@ if (isset($_SESSION['user'])) {
                         <th scope="col" class="col-2">Date</th>
                         <th scope="col" class="col-1">Completed</th>
                         <th scope="col" class="col-3">Progress</th>
+                        <th scope="col" class="col-3">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbodyresult">
                     <?php
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr class=''>";
