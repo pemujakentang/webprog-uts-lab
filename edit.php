@@ -46,38 +46,32 @@ if (isset($_POST['update_task'])) {
 </head>
 <body>
     <section class="hidden elements">
-        <div class="col-3 p-0">
-                        <div class="login-image">
-                            <img class="side-image" src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/person-writing-letter-with-metal-quill.jpg?itok=lCt7Bo6c" />
-                        <div class="image-tint"></div>
-                        </div>
-                </div>
     </section>
-        <div class="container-fluid d-flex align-items-center justify-content-center background-primary" style="height: 100vh;">            
+        <div class="container-fluid d-flex align-items-center justify-content-center background-primary" style="height: 100vh; background-image: url('bg.jpg'); background-size:cover;">            
         <section class="hidden elements">
 
             <div class="mx-auto rounded login-form show" id="efields">
                     <h1 class="text-center">Edit Task</h1>
                     <form method="post">
-                        <div class="mb-3 mx-auto login-input-field" id="editfield">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label for="new_task" class="form-label">Task</label>
                             <div>
                                 <input id='new_task' class="form-control" type="text" name="new_task" value="<?php echo $row['task']; ?>">
                             </div>
                         </div>
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label for="new_description" class="form-label">Description</label>
                             <div>
                                 <textarea class="form-control" id="new_description" name="new_description"><?php echo $row['description']; ?></textarea>
                             </div>
                         </div>
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label for="new_date" class="form-label">Date Finished</label>
                             <div>
                                 <input type="date" name="new_date" class="form-control" value="<?php echo $row['date']; ?>">
                             </div>
                         </div>
-                        <div class="mb-3 mx-auto login-input-field">
+                        <div class="mb-3 mx-auto login-input-field" id="field">
                             <label class="form-label" for="new_progress">Progress</label>
                             <div>
                                 <select name="new_progress" id="new_progress" class="form_control">

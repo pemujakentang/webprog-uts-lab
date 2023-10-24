@@ -23,9 +23,11 @@ body {
 }
 
 #icon {
-    padding-left: 20px;
-    padding-top: 5px;
     color: white;
+    width: 3em;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .login-image{
@@ -60,10 +62,6 @@ body {
 
 }
 
-.login-input-field{
-    width: 50vh;
-}
-
 .background-primary {
     background-color: whitesmoke;
 }
@@ -72,8 +70,9 @@ body {
     width: 40rem;
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(251, 159, 137, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.172);
+    overflow: hidden;
 }
 
 .no-border{
@@ -92,6 +91,19 @@ body {
 
 #toDoForm {
     margin-bottom: 30px;
+    margin-top: 10px;
+    background-color: rgb(255, 248, 239);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#createbar {
+    background-color: rgb(190, 121, 1);
+    font-weight: bold;
+    color: white;
+    border: 1.5px solid rgb(116, 73, 0);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .actbuttonheader {
@@ -108,7 +120,7 @@ body {
     justify-content: center;
 }
 
-.logoutbadge {
+#logoutbadge {
     height: 35px;
     align-items: right;
     justify-content: flex-end;
@@ -116,38 +128,55 @@ body {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(253, 255, 164);
+    background-color: rgb(227, 39, 39);
     border-radius: 5px;
     margin-left: 10px;
     font-weight: bold;
     font-style: italic;
     float: right;
     text-align: right;
+    color: white;
 }
 
 /* Add your desired styles for each progress option */
 .option-not-started {
-    background-color: #FFCCCC; /* Red for "Not Started" */
+    background-color: #FFCCCC;
 }
 
 .option-in-progress {
-    background-color: #FFFF99; /* Yellow for "In Progress" */
+    background-color: #FFFF99;
 }
 
 .option-waiting-on {
-    background-color: #99CCFF; /* Blue for "Waiting On" */
+    background-color: #99CCFF;
 }
 
 .option-completed {
-    background-color: #CCFFCC; /* Green for "Completed" */
+    background-color: #CCFFCC;
 }
 
-/* Initial styles to hide the form elements */
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
+    scale: 0.8;
+    transition: all 0.6s;
+}
+
+.addbtn {
+    background-color: rgb(253, 255, 164);
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+    border: 1.5px solid rgb(0, 0, 0);
+}
+
+.cancelbtn {
+    background-color: crimson;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: black;
+    border: 1.5px solid rgb(0, 0, 0);
 }
 
 .usernamebadge {
@@ -170,11 +199,18 @@ body {
     background-color: rgb(255, 248, 239);
 }
 
+#ths {
+    background-color: rgb(190, 121, 1);
+    border-radius: 0px;
+    color: white;
+}
+
 /* Styles to show the form elements with a staggered transition */
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+    scale: 1;
 }
 
 /* Stagger the transitions */
@@ -196,6 +232,45 @@ body {
 
 #login-jpg {
     display: hidden;
+}
+
+.table {
+    scale: 0.9;
+    border-radius: 10px;
+    background-color: rgb(116, 68, 0);
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+#tbodyresult {
+    align-items: center;
+    justify-content: center;
+}
+
+.addbutton {
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(253, 255, 164);
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px;
+    text-align: left;
+    border: 1.5px solid black;
+    color: black;
+    display: inline-block;
+}
+
+#buttoncreatediv {
+    display: block;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {

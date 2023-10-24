@@ -48,15 +48,15 @@ if (isset($_SESSION['user'])) {
     <header class="navbar navbar-expand-lg bd-navbar sticky-top primary-background-color">
         <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap navigation-bar" id="navbarhead">
             <div class="headertitle">
-                <i class="fa-solid fa-pencil fs-3 pe-3" id="icon"></i>
+                <img class="icons" id="icon" src="logo.png">
                 <div class="logo">
-                    Le To-Do List
+                    U To-Do List
                 </div>
             </div>
             <div class="actbuttonheader">
             <?php
             if (isset($_SESSION['user'])) {
-                echo '<a href="logout.php" class="btn btn-danger" id="usernamebadge">Logout</a>';
+                echo '<a href="logout.php" id="logoutbadge">Logout</a>';
                 // echo $_SESSION['user'];
                 echo "<span class='usernamebadge' id='usernamebadge'>".$_SESSION['userinfo']['username']."</span>" ;
             }
@@ -73,29 +73,29 @@ if (isset($_SESSION['user'])) {
             echo "</section>";
         } else {
             echo "<section class='hidden elements'>";
-            echo "<div>";
-            echo '<button id="showForm" type="button" class="btn btn-primary my-4">Add a Task</button>';
+            echo "<div id='buttoncreatediv'>";
+            echo '<button id="showForm" type="button" class="addbutton">Add a Task</button>';
             echo "<div id='toDoForm' style='display:none;'>";
             echo "<form action='create.php' method='post'>";
-            echo "<div class='mb-3 mx-auto login-input-field'>";
+            echo "<div class='mb-3 mx-auto login-input-field' id='createbar'>";
             echo "<label>Task</label>";
             echo "<div>";
             echo "<input class='form-control' type='text' name='task' placeholder='Enter your task' value=''>";
             echo "</div>";
             echo "</div>";
-            echo "<div class='mb-3 mx-auto login-input-field'>";
+            echo "<div class='mb-3 mx-auto login-input-field' id='createbar'>";
             echo "<label>Description</label>";
             echo "<div>";
             echo "<textarea class='form-control' name='description' placeholder='task description' value=''></textarea>";
             echo "</div>";
             echo "</div>";
-            echo "<div class='mb-3 mx-auto login-input-field'>";
+            echo "<div class='mb-3 mx-auto login-input-field' id='createbar'>";
             echo "<label>Date Finished</label>";
             echo "<div>";
             echo "<input class='form-control' type='date' name='date'/>";
             echo "</div>";
             echo "</div>";
-            echo "<div class='mb-3 mx-auto login-input-field'>";
+            echo "<div class='mb-3 mx-auto login-input-field' id='createbar'>";
             echo "<div>";
             echo "<label>Progress</label>";
             echo "</div>";
@@ -106,8 +106,8 @@ if (isset($_SESSION['user'])) {
             echo "<option value='Completed'>Completed</option>";
             echo "</select>";
             echo "</div class='mb-3 mx-auto login-input-field'>";
-            echo "<button type='submit' class='btn btn-primary me-3'>Add</button>";
-            echo "<button id='cancelButton' class='btn btn-warning' type='button'>Cancel</button>";
+            echo "<button type='submit' class='addbtn'>Add</button>";
+            echo "<button id='cancelButton' class='cancelbtn' type='button'>Cancel</button>";
             echo "</form>";
             echo "</div>";
             echo "</div>";
@@ -131,13 +131,13 @@ if (isset($_SESSION['user'])) {
         <div class="mx-auto">
             <table class="table">
                 <thead>
-                    <tr>
-                        <th scope="col" class="col-3">Task</th>
-                        <th scope="col" class="col-4">Description</th>
-                        <th scope="col" class="col-2">Date</th>
-                        <th scope="col" class="col-1">Completed</th>
-                        <th scope="col" class="col-3">Progress</th>
-                        <th scope="col" class="col-3">Action</th>
+                    <tr id="ths">
+                        <th scope="col" class="col-3" id="ths">Task</th>
+                        <th scope="col" class="col-4" id="ths">Description</th>
+                        <th scope="col" class="col-2" id="ths">Date</th>
+                        <th scope="col" class="col-1" id="ths">Completed</th>
+                        <th scope="col" class="col-3" id="ths">Progress</th>
+                        <th scope="col" class="col-3" id="ths">Action</th>
                     </tr>
                 </thead>
                 <tbody id="tbodyresult">

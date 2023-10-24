@@ -11,12 +11,6 @@
 </head>
 <body>
     <section class="hidden elements">
-        <div class="col-3 p-0" id="login-jpg">
-                <div class="login-image">
-                    <img class="side-image" src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/person-writing-letter-with-metal-quill.jpg?itok=lCt7Bo6c" />
-                <div class="image-tint"></div>
-                </div>
-        </div>
     </section>
 
         <div class="container-fluid d-flex align-items-center justify-content-center background-primary" style="height: 100vh;" id="log-form">
